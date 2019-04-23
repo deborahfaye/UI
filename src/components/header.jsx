@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../css/header.css';
 
+// contains the title of the system
 class Header extends Component{
     render(){
         return(
@@ -14,6 +15,7 @@ class Header extends Component{
 
 }
 
+// the gold line between the title and nav button
 class Header2 extends Component{
     render(){
         return(

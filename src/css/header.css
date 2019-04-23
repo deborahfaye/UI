@@ -1,6 +1,5 @@
 .header{
     width: 100%;
-    /* background-size: cover;  */
     height:60px;
     text-align: center;
     background-color: #011c36;
@@ -20,8 +19,6 @@
 .header img{
     margin-top: .5%;
     background-image: url('../components/Picture/logo.png');
-    /* background-size: cover; */
-    /* background-attachment: fixed;  */
     height: 45px;
     width: 45px;
     
