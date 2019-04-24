@@ -18,7 +18,6 @@ class AddSkills extends Component {
       getskillList:[],
       skill:''
     };
-    //  this.handleChange = this.handleChange.bind(this);
   }
 
 componentDidMount(){
@@ -35,7 +34,7 @@ getSkills(){
 }
 
 
-
+// handle for addskills
  handleChange = (event) =>{
   this.setState({
       [event.target.name]: event.target.value
@@ -48,33 +47,40 @@ handleAddSkill2 = (event) => {
   
 //   console.log("skill_type");
 //   console.log(skill_type:this.state.skill_type);
-  
-  const addSkill=
+    if(this.state.skill===''){
+      console.log('no input');
+      alert("Input a Skill !!");
+    }
+    else{
+      const addSkill=
     {
         skill:this.state.skill
     };
 
-  console.log("input");
-  console.log(addSkill);
-     
-  axios.post('http://localhost:8080/CaseStudy/rest/skills', addSkill)
-  .then(res => {console.log(res.data);console.log(res); })
-   
-  console.log('addSkill');
-  console.log(addSkill);
+    console.log("input");
+    console.log(addSkill);
 
-  this.setState({
-     skill:''
-   });
+    axios.post('http://localhost:8080/CaseStudy/rest/skills', addSkill)
+    .then(res => {console.log(res.data);console.log(res); })
+    
+    console.log('addSkill');
+    console.log(addSkill);
+    
+    this.setState({
+      skill:''
+    });
+ 
+    event.preventDefault();
 
-   event.preventDefault();
-
+  }
+  
 }
 
+// adds the posted skill from the database to the list shown in the website
 handleAddSkill = (event) => {
     
-    console.log("addskill");
-    console.log(addSkill);
+    // console.log("addskill");
+    // console.log(addSkill);
   
     let addSkill = this.state.addSkill;
     let getskillList =[...this.state.getskillList];
@@ -88,9 +94,6 @@ handleAddSkill = (event) => {
     event.preventDefault();
   }  
 
-
-   
-   
 render(){
 
 let getskillList = this.state.getskillList;
@@ -99,10 +102,10 @@ console.log(getskillList);
 
 
 return(
-    <div className="AddSkill"> 
+    <div className="addedskill"> 
           <p></p>
         <div className="right">  
-        <p></p>    
+        {/* <p></p>     */}
         <fieldset>
         <legend>Add Skill:</legend>
         <p>Skill: </p>
