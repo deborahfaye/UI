@@ -1,4 +1,4 @@
-import {skillListURL, addSkillURL} from './service-url';
+import {skillListURL,  devListURL} from './service-url';
 import axios from 'axios';
 
 // get Skill
@@ -8,5 +8,15 @@ const skillList = () => {
 
 export {
     skillList
+}
+
+
+//get Dev
+const devList = () => {
+    return axios.get(devListURL);
+}
+
+export{
+    devList
 }
 
