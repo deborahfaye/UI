@@ -12,34 +12,53 @@
 .inputtab{
     float: left;
     margin-left: 5%;
-    margin-top: 20px;
+    margin-top: 5%;
     width:30%;
-     margin-top:0; 
+    margin-top:1%; 
     margin-right:20px;
     border-radius: 5px;
     background-color: rgb(237, 240, 245);
     font-weight: bold;
-    /* border-color: black; */
-    /* border-style: groove; */
+    text-align: left;
+    /* border-left-width: 9px; */
+    border-color: black;
+    border-style: groove;
 }
 .inputtab input[type=text] {
     width: 60%;
     font-weight: bold;
     padding: 5px;  
-    /* border: 1px solid #ccc; */
-    /* border-radius: 4px; */
+    border-radius: 4px; 
     box-sizing: border-box;
-    /* margin-top: 6px; */
+    margin-top: 6px;
+    margin-left: 70px;
     margin-bottom: 16px;
     resize: vertical;
+    border-color: deepskyblue;
+    border-style: groove;
+ 
     }
+     .inputtab input[type=date] {
+        width: 60%;
+        font-weight: bold;
+        padding: 5px;  
+        border-radius: 4px; 
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-left: 70px;
+        margin-bottom: 16px;
+        resize: vertical;
+        border-color: deepskyblue;
+        border-style: groove;
+        }
+
 .inputtab  button[type=submit] {
         background-color: #4CAF50;
         color: white;
         font-weight: bold;
          padding: 12px 20px;  
         /* border: none; */
-        /* border-radius: 4px; */
+        border-radius: 5px; 
         text-align: center;
         margin-left:auto;
         margin-right:auto;
@@ -69,20 +88,26 @@
     /* border-color: #011c36; */
 } 
 .dev-list-panel table{
-    margin-top: 8px;
+    margin-top: 1%;
     margin-right: 50px;
     margin-left: 40px;
-    border: black;
+    /* border: black; */
     border-radius: 4px;
-    background-color: #dddddd;
+    border: 1px  black ; 
+    background-color: #011c36;
     text-align: left;
     font-family: arial, sans-serif;
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
     width: 50%;
 }
 tr{
-    /* border: 1px solid #dddddd;  */
+    border: 1px  #dddddd;  
     /* border-color: aliceblue; */
     text-align: left;
+    /* border-color: aliceblue; */
     padding: 8px;
+    background-color: white;
   }
+  /* th{
+      border-color: aliceblue;
+  } */

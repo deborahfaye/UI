@@ -16,7 +16,9 @@ class AddSkills extends Component {
   
     this.state={
       getskillList:[],
-      skill:''
+      skill:'',
+      query:'',
+      searchlist:[]
     };
   }
 
@@ -24,6 +26,7 @@ componentDidMount(){
   this.getSkills();
 }
 
+// Gets all the skill list in the database
 getSkills(){
   skillList().then(res =>{
     console.log('res');
@@ -34,19 +37,18 @@ getSkills(){
 }
 
 
-// handle for addskills
+// handle for addskills(post)
  handleChange = (event) =>{
   this.setState({
       [event.target.name]: event.target.value
-      
   });
+
 }
 
 
 handleAddSkill2 = (event) => {
-  
-//   console.log("skill_type");
-//   console.log(skill_type:this.state.skill_type);
+   event.preventDefault();
+
     if(this.state.skill===''){
       console.log('no input');
       alert("Input a Skill !!");
@@ -64,39 +66,47 @@ handleAddSkill2 = (event) => {
     .then(res => {console.log(res.data);console.log(res); })
     
     console.log('addSkill');
-    console.log(addSkill);
+    console.log(this.state.skill);
     
+   
     this.setState({
       skill:''
     });
- 
-    event.preventDefault();
 
+     window.location.reload()
+   
   }
   
 }
 
-// adds the posted skill from the database to the list shown in the website
-handleAddSkill = (event) => {
-    
-    // console.log("addskill");
-    // console.log(addSkill);
+// search
+handleInputChange = () => {
+  this.setState({query:this.search.value})
+
+  console.log("inputfor search");
+  // console.log(this.search.value);
+  // console.log({query});
   
-    let addSkill = this.state.addSkill;
-    let getskillList =[...this.state.getskillList];
-  
-    getskillList.push(addSkill);
-  
-    this.setState({getskillList: getskillList});
-    console.log('getSkillList');
-    console.log(getskillList);
-  
-    event.preventDefault();
-  }  
+  const url = "http://localhost:8080/CaseStudy/rest/skills?skill=" + this.search.value;
+
+  axios.get(url)
+  .then(response => {
+    this.setState({searchlist:response.data});
+    console.log(response);
+    })
+
+    this.setState({
+      query:''
+    });
+
+}
+
+
 
 render(){
 
 let getskillList = this.state.getskillList;
+let searchlist =this.state.searchlist;
 console.log("hello world");
 console.log(getskillList);
 
@@ -108,22 +118,44 @@ return(
         {/* <p></p>     */}
         <fieldset>
         <legend>Add Skill:</legend>
-        <p>Skill: </p>
+        <br></br>
+        Skill: 
+        <br></br>
         <input 
         type="text" 
         name="skill" 
-        id="skill"  
+        id="skill" 
+        required="required" 
         placeholder="Input a skill.." 
         onChange={this.handleChange} 
-        // value={this.state.skill_type} 
         >
         </input>
-        <p></p>
+        
         <button type="submit"  className="samplebutt" onClick={this.handleAddSkill2}>Add</button> 
         </fieldset>       
+        <span>Refresh the Page after submission ..</span>
         </div>
  
+        <div className="search">  
+        <input
+           ref={input => this.search = input}
+           type="text" 
+           name="search" 
+           id="search" 
+           maxLength={15} 
+           placeholder="Search"
+          //  values={this.state.value}
+           onChange={this.handleInputChange}  
+        >
+     
+
+     </input> 
+     {/* <button type="submit" name="search" id="search" onClick={this.handleFilter}  >Search</button>  */}
+          
+    
+     </div>
  
+        
          <div className='skill-list-panel' >
          <ul className="skill-list">
          <p>Skill List:</p>
@@ -137,6 +169,19 @@ return(
          </ul>
          </div>
 
+         <div className='search-panel' >
+         <p>Search:</p>
+         {searchlist.map(serch =>{
+         return(
+             <li key={serch.id}>
+             <Skill key={serch.id} skill={serch.skill}/>
+            </li>
+             )
+             }) }
+         </div>
+
+        
+
         </div>
         ); 
     }
@@ -144,8 +189,7 @@ return(
 
  AddSkills.propTypes = {
     handleAddSkill: PropTypes.func,
-    handleAddSkill2: PropTypes.func,
     getskillList: PropTypes.array,
-
+   
 } 
 export default AddSkills;

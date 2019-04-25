@@ -8,13 +8,16 @@
   /* margin-top: 1%; */
   margin-bottom: 1%;
    border-radius: 5px; 
+   position: fixed;
+   
   }
 .right {
     float: left;
     margin-left: 10%;
-    margin-top: 20px;
+    margin-top: 6%;
+    text-align: left;
     width:30%;
-    margin-top:0;
+    /* margin-top:0; */
     margin-right:30px;
     border-radius: 5px;
     background-color: rgb(237, 240, 245);
@@ -24,13 +27,15 @@
     } 
 
 .right input[type=text] {
-    width: 60%;
+    width: 100%;
     font-weight: bold;
     padding: 10px; 
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 4px;
+    border-color: deepskyblue;
+    border-style: groove;
     box-sizing: border-box;
-    margin-top: 6px;
+    margin-top: 20px;
     margin-bottom: 16px;
     resize: vertical;
     }
@@ -42,11 +47,12 @@
         border: none;
         border-radius: 4px;
         text-align: center;
-        margin-left:auto;
-        margin-right:auto;
         display:block;
-        margin-top:10%;
+        margin-top:5%;
+        margin-left:25%;
+        margin-left: 25%;
         margin-bottom:5%;
+        width: 50%;
         }
         
 .right  button[type=submit]:hover {
@@ -63,7 +69,7 @@
     float: right;
     background: rgb(237, 240, 245);
     width: 30%;
-    margin-top: 0px;
+    /* margin-top: 0px; */
     margin-right: 15%;
     border-radius: 5px;
     border-style: groove;
@@ -71,7 +77,7 @@
 } 
 .skill-list {
    list-style: none;
-   padding: 1;
+   /* padding: 1; */
 }
 .skill-list li {
    background: rgb(237, 240, 245);
@@ -93,3 +99,7 @@
 /* .right fieldset{
     height: 50%;
 } */
+ .right span{
+   color: red;
+   font-size: 10px;
+} 

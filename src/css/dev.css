@@ -1,9 +1,13 @@
-td, th {
-    /* border: 1px solid #dddddd;  */
-    text-align: left;
+
+.tr, th {
+     border: 1px solid; 
+    text-align: center;
+    text-emphasis-style: initial;
     padding: 8px;
-    /* width: 30%; */
-    background-color: #dddddd;
+    /* border-radius: 5px; */
+    background: rgb(59, 89, 152); 
+    /* border-color: aliceblue; */
+    color:white;
   }
   
  

@@ -5,7 +5,7 @@ import Dev from './dev';
 import {
     devList,
   }from '../util/service-helper'; 
-//    import axios from 'axios';
+import axios from 'axios';
 
 class AddDev extends Component{
 
@@ -14,9 +14,16 @@ constructor(props){
     super(props);
 
     this.state={
-        getdevList:[]
+        getdevList:[],
+        firstName:"",
+        middleName:"",
+        lastName:"",
+        birthDate:"",
+        position:""
     };
 }
+
+// getting the list of developers from the database
 componentDidMount(){
     this.getDev();
 }
@@ -25,6 +32,53 @@ getDev(){
     devList().then(res => {
         this.setState({getdevList:res.data});
     })
+}
+
+//posting data to the database
+handleChange2 = (event) =>{
+    this.setState({
+        [event.target.name]:event.target.value
+    });
+}
+
+handleAddDev = (event) => {
+   
+    if(this.state.firstName === '' && this.state.lastName === '' &&
+       this.state.birthDate === '' && this.state.position === ''){
+
+        console.log('no input');
+        alert("Input FirstName, LastName, BirthDate and Position")
+       }else{
+           const addDev={
+               firstName:this.state.firstName,
+               middleName:this.state.middleName,
+               lastName:this.state.lastName,
+               birthDate:this.state.birthDate,
+               position:this.state.position
+           };
+
+           console.log("input");
+           console.log(addDev);
+
+           axios.post('http://localhost:8080/CaseStudy/rest/users', addDev)
+           .then(res => {console.log(res.data); console.log(res);})
+          
+           console.log('addSkill');
+           console.log(addDev);
+
+           this.setState({
+            firstName:'',
+            middleName:'',
+            lastName:'',
+            birthDate:'',
+            position:''
+          });
+          event.preventDefault();
+          
+    window.location.reload()
+        }
+
+
 }
 
     render(){
@@ -42,64 +96,68 @@ getDev(){
                 <fieldset>
                   <legend>Add Developer:</legend>
 
-                <p>FirstName:</p>
+                FirstName: 
+                <br></br>
                 <input 
                 type="text" 
-                name="firstname" 
-                id="firstname"  
+                required="required"
+                name="firstName" 
+                id="firstName"  
                 placeholder="Input firstname.." 
-                onChange={this.handleChange} 
-                // value={this.state.skill_type} 
+                onChange={this.handleChange2}  
                 >
                 </input>
 
-                
-                <p>MiddleName:</p>
+                <br></br>
+                MiddleName:
+                <br></br>
                 <input 
                 type="text" 
-                name="middlename" 
-                id="middlename"  
+                name="middleName" 
+                id="middleName"  
                 placeholder="Input middlename.." 
-                onChange={this.handleChange} 
-                // value={this.state.skill_type} 
+                onChange={this.handleChange2} 
                 >
                 </input>
-
-                <p>LastName:</p>
+                <br></br>
+                LastName: 
+                <br></br>
                 <input 
                 type="text" 
-                name="lastname" 
-                id="lastname"  
+                required="required"
+                name="lastName" 
+                id="lastName"  
                 placeholder="Input lastname.." 
-                onChange={this.handleChange} 
-                // value={this.state.skill_type} 
+                onChange={this.handleChange2} 
                 >
                 </input>
-
-                <p>BirthDate:</p>
+                <br></br>
+                BirthDate: 
+                <br></br>
                 <input 
                 type="date"
-                name="bday" 
-                id="bday"  
+                required="required"
+                name="birthDate" 
+                id="birthDate"  
                 placeholder="Input birthdate.." 
-                onChange={this.handleChange} 
-                // value={this.state.skill_type} 
+                onChange={this.handleChange2} 
                 >
                 </input>
-
-                <p>Position:</p>
-                <input 
+                <br></br>
+                Position: 
+                <br></br>
+               <input 
                 type="text" 
+                required="required"
                 name="position" 
                 id="position"  
                 placeholder="Input position.." 
-                onChange={this.handleChange} 
-                // value={this.state.skill_type} 
+                onChange={this.handleChange2} 
                 >
                 </input>
 
                 
-                <button type="submit"  className="samplebutt" onClick={this.handleAdddev}>Add</button> 
+                <button type="submit"  className="samplebutton" onClick={this.handleAddDev}>Add</button> 
 
                 </fieldset>
                 </div>

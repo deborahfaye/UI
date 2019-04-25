@@ -1,4 +1,4 @@
-import {skillListURL,  devListURL} from './service-url';
+import {skillListURL,  devListURL, getFilteredDataURL} from './service-url';
 import axios from 'axios';
 
 // get Skill
@@ -19,4 +19,3 @@ const devList = () => {
 export{
     devList
 }
-

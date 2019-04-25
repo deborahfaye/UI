@@ -9,8 +9,6 @@ import {
   import AddSkills from "./addskill";
   import AddDev from "./adddev";
   import AddAssessment from "./addassessment";
-  import UpdateAssessment from "./updateassessment";
-
 //  contains the nav buttons
 class Body extends Component{
     render(){
@@ -19,10 +17,10 @@ class Body extends Component{
 <div className="body1" >
 <ul className="nav" >
      <li><NavLink to="/">Home</NavLink></li>
-     <li><NavLink to="/askill">Add Skill</NavLink></li>
-     <li><NavLink to="/dev">Add Dev</NavLink></li>
-     <li><NavLink to="/askill2">Add Skill Assessment</NavLink></li>  
-     <li><NavLink to="/upskill">Update Skill Assessment</NavLink></li>  
+     <li><NavLink to="/askill">Skill</NavLink></li>
+     <li><NavLink to="/dev">Developer</NavLink></li>
+     <li><NavLink to="/askill2">Skill Assessment</NavLink></li>  
+     {/* <li><NavLink to="/upskill">Update Skill Assessment</NavLink></li>   */}
      <input
            href="#search"
            type="text" 
@@ -40,7 +38,7 @@ class Body extends Component{
  <Route path="/askill" component={AddSkills}/>
  <Route path="/dev" component={AddDev}/>
  <Route path="/askill2" component={AddAssessment}/>
- <Route path="/upskill" component={UpdateAssessment}/>
+ {/* <Route path="/upskill" component={UpdateAssessment}/> */}
 
   </div>
 </div>       
