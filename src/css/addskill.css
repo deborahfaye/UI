@@ -1,23 +1,24 @@
-.addedskill{
-  position: fixed;
-  background: rgb(237, 240, 245);
+ /* .addedskill{
+   position: fixed; 
+  background-color: rgb(237, 240, 245);
   width: 98%;
-  height: 77%;
+  height: inherit;
   margin-left: 1%;
-  margin-right: 1%;
-  /* margin-top: 1%; */
+  margin-right: 1%; 
+   margin-top: 1%; 
   margin-bottom: 1%;
    border-radius: 5px; 
-   position: fixed;
-   
-  }
-.right {
+   position:inherit; 
+  }  */
+.right fieldset{
     float: left;
-    margin-left: 10%;
-    margin-top: 6%;
+    margin-left: 1%;
+    /* margin-right: 1%; */
+    margin-top: 10px;
     text-align: left;
     width:30%;
-    /* margin-top:0; */
+    /* margin-top:2%; */
+    padding: 1%;
     margin-right:30px;
     border-radius: 5px;
     background-color: rgb(237, 240, 245);
@@ -25,7 +26,11 @@
     border-color: black;
     border-style: groove;
     } 
-
+.right legend{
+  color:red;
+  background-color: rgb(237, 240, 245);
+  border-radius: 5px;
+}
 .right input[type=text] {
     width: 100%;
     font-weight: bold;
@@ -35,7 +40,7 @@
     border-color: deepskyblue;
     border-style: groove;
     box-sizing: border-box;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 16px;
     resize: vertical;
     }
@@ -48,9 +53,9 @@
         border-radius: 4px;
         text-align: center;
         display:block;
-        margin-top:5%;
-        margin-left:25%;
-        margin-left: 25%;
+        margin-top:3%;
+         margin-left:25%; 
+        /* margin-right: 25%; */
         margin-bottom:5%;
         width: 50%;
         }
@@ -60,23 +65,28 @@
             }
 .right p{
      text-align: left;
-     margin-left: 20px;
+     margin-left: 45%;
      margin-top: 40px;
      padding: 10px;
-     /* border-style: groove; */
+    
  }           
 .skill-list-panel ul{
-    float: right;
+     float: right;  
     background: rgb(237, 240, 245);
-    width: 30%;
-    /* margin-top: 0px; */
-    margin-right: 15%;
+    width: 50%;
+    margin-top: 10px; 
+    margin-left: auto;
+    margin-right: 5%;
     border-radius: 5px;
     border-style: groove;
     border-color: #011c36;
+    font-weight: bold;
+    
 } 
 .skill-list {
    list-style: none;
+   background: rgb(237, 240, 245);
+   margin-bottom: 1%;
    /* padding: 1; */
 }
 .skill-list li {
@@ -84,22 +94,63 @@
    /* padding: 1px; */
    width: 50%;
    border-radius: 4px;
-   margin-left: 30px;
+   margin-left:12%;
+   font-size: 8px;
+   
 
+}
+.skill-list input{
+    width: 40%;
+    font-weight: bold;
+     padding: 8px;  
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    border-color: deepskyblue;
+    border-style: groove;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 16px;
+     /* margin-right: 1%;  */
+    /* resize: vertical; */
 }
 .skill-list p {
    font-weight: bold;
    font-size: 15px;
    text-align: left;
+   margin-left: 8%;
 }
 
 .skill {
    display: inline-block;
 }
-/* .right fieldset{
-    height: 50%;
-} */
  .right span{
    color: red;
    font-size: 10px;
 } 
+.search-panel li{
+    float: left;
+    list-style: none;
+    font-size: 30px;
+    display: inline;
+    /* float: left; */
+    background: rgb(237, 240, 245);
+    padding: 1px; 
+    /* width: 50%; */
+    border-radius: 4px;
+    margin-left:12%;
+    font-size: 8px;
+}
+.search-panel {
+    list-style: none;
+    background: rgb(237, 240, 245);
+    margin-bottom: 1%;
+    /* padding: 1; */
+ }
+ /* .skill-list li {
+    background: rgb(237, 240, 245);
+    /* padding: 1px; 
+    width: 50%;
+    border-radius: 4px;
+    margin-left:12%;
+    font-size: 8px;
+     */

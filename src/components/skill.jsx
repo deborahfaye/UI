@@ -9,6 +9,7 @@ class Skill extends Component{
         return(
             <div className='skills'>
                 <p className='user-skill'>{this.props.skill}</p>
+                
             </div>
         );
     }

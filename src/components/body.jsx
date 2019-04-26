@@ -20,7 +20,7 @@ class Body extends Component{
      <li><NavLink to="/askill">Skill</NavLink></li>
      <li><NavLink to="/dev">Developer</NavLink></li>
      <li><NavLink to="/askill2">Skill Assessment</NavLink></li>  
-     {/* <li><NavLink to="/upskill">Update Skill Assessment</NavLink></li>   */}
+     {/* <li><NavLink to="/upskill">Update Skill Assessment</NavLink></li>   */} */}
      <input
            href="#search"
            type="text" 

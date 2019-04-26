@@ -5,9 +5,10 @@
     margin-bottom: 0%; 
     background-image: url('../components/Picture/coding-dojo2.png') ;
     background-size: cover;
+     /* position: fixed;  */
   } 
  .div{
-    background-attachment: fixed;
+     background-attachment: fixed; 
 } 
 
 .body1 {
@@ -15,13 +16,14 @@
     background-color: #011c36;
     height:45px;
     text-align: center;
+     position: relative; 
   
 }
 
 .body1 a{
     color: white;
     text-decoration: none;
-    position: relative;
+    position: inherit; 
    
  }
 

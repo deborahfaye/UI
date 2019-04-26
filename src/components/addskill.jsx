@@ -11,13 +11,13 @@ class AddSkills extends Component {
    
    
  // for skilllist  
-  constructor(props){
+constructor(props){
     super(props);
   
     this.state={
       getskillList:[],
       skill:'',
-      query:'',
+      query:false,
       searchlist:[]
     };
   }
@@ -38,7 +38,7 @@ getSkills(){
 
 
 // handle for addskills(post)
- handleChange = (event) =>{
+handleChange = (event) =>{
   this.setState({
       [event.target.name]: event.target.value
   });
@@ -49,57 +49,58 @@ getSkills(){
 handleAddSkill2 = (event) => {
    event.preventDefault();
 
-    if(this.state.skill===''){
-      console.log('no input');
-      alert("Input a Skill !!");
-    }
-    else{
-      const addSkill=
-    {
-        skill:this.state.skill
-    };
+      if(this.state.skill===''){
+        console.log('no input');
+        alert("Input a Skill !!");
+      }
+      else{
+        const addSkill=
+      {
+          skill:this.state.skill
+      };
 
-    console.log("input");
-    console.log(addSkill);
+      console.log("input");
+      console.log(addSkill);
 
-    axios.post('http://localhost:8080/CaseStudy/rest/skills', addSkill)
-    .then(res => {console.log(res.data);console.log(res); })
+      axios.post('http://localhost:8080/CaseStudy/rest/skills', addSkill)
+      .then(res => {console.log(res.data);console.log(res); })
+      
+      console.log('addSkill');
+      console.log(this.state.skill);
+      
     
-    console.log('addSkill');
-    console.log(this.state.skill);
-    
-   
-    this.setState({
-      skill:''
-    });
+      this.setState({
+        skill:''
+      });
 
-     window.location.reload()
+      window.location.reload()
    
   }
   
 }
 
 // search
-handleInputChange = () => {
-  this.setState({query:this.search.value})
+// handleInputChange = () => {
+//   this.setState({query:this.search.value})
 
-  console.log("inputfor search");
-  // console.log(this.search.value);
-  // console.log({query});
+//   console.log("inputfor search");
+//   // if(this.search.value !== ''){
+
+//   const url = "http://localhost:8080/CaseStudy/rest/skills?skill=" + this.search.value;
+
+//   axios.get(url)
+//   .then(response => {
+//     this.setState({searchlist:response.data});
+//     console.log(response);
+//     })
+
+//     this.setState({
+//       query:''
+//     });
   
-  const url = "http://localhost:8080/CaseStudy/rest/skills?skill=" + this.search.value;
+  
 
-  axios.get(url)
-  .then(response => {
-    this.setState({searchlist:response.data});
-    console.log(response);
-    })
-
-    this.setState({
-      query:''
-    });
-
-}
+// }
 
 
 
@@ -114,73 +115,66 @@ console.log(getskillList);
 return(
     <div className="addedskill"> 
           <p></p>
-        <div className="right">  
-        {/* <p></p>     */}
-        <fieldset>
-        <legend>Add Skill:</legend>
-        <br></br>
-        Skill: 
-        <br></br>
-        <input 
-        type="text" 
-        name="skill" 
-        id="skill" 
-        required="required" 
-        placeholder="Input a skill.." 
-        onChange={this.handleChange} 
-        >
-        </input>
-        
-        <button type="submit"  className="samplebutt" onClick={this.handleAddSkill2}>Add</button> 
-        </fieldset>       
-        <span>Refresh the Page after submission ..</span>
-        </div>
- 
-        <div className="search">  
-        <input
-           ref={input => this.search = input}
-           type="text" 
-           name="search" 
-           id="search" 
-           maxLength={15} 
-           placeholder="Search"
-          //  values={this.state.value}
-           onChange={this.handleInputChange}  
-        >
-     
-
-     </input> 
-     {/* <button type="submit" name="search" id="search" onClick={this.handleFilter}  >Search</button>  */}
+          <div className="right">  
+                                  {/* <p></p>     */}
+                                  <fieldset>
+                                  <legend>Add Skill:</legend>
+                                  <br></br>
+                                  Skill: 
+                                  <br></br>
+                                  <input 
+                                  type="text" 
+                                  name="skill" 
+                                  id="skill" 
+                                  required="required" 
+                                  placeholder="Input a skill.." 
+                                  onChange={this.handleChange} 
+                                  >
+                                  </input>
+                                  
+                                  <button type="submit"  className="samplebutt" onClick={this.handleAddSkill2}>Add</button> 
+                                  </fieldset>       
+            
+              </div>
+              
+              <div className='skill-list-panel' >
+              <ul className="skill-list">
+                          {/* Search:
+                                <input
+                                  ref={input => this.search = input}
+                                  type="text" 
+                                  name="search" 
+                                  id="search" 
+                                  maxLength={15} 
+                                  placeholder="Search"
+                    
+                                  onChange={this.handleInputChange}  
+                                >
+                                </input> */}
           
-    
-     </div>
- 
-        
-         <div className='skill-list-panel' >
-         <ul className="skill-list">
-         <p>Skill List:</p>
-       {getskillList.map(skl =>{
-         return(
-             <li key={skl.id}>
-             <Skill key={skl.id} skill={skl.skill}/>
-            </li>
-             )
-             }) }
-         </ul>
-         </div>
-
-         <div className='search-panel' >
-         <p>Search:</p>
-         {searchlist.map(serch =>{
-         return(
-             <li key={serch.id}>
-             <Skill key={serch.id} skill={serch.skill}/>
-            </li>
-             )
-             }) }
-         </div>
-
-        
+                              <p>Skill List:</p>
+                            {getskillList.map(skl =>{
+                              return(
+                                  <li key={skl.id}>
+                                  <Skill key={skl.id} skill={skl.skill}/>
+                                  </li>
+                                  )
+                                  }) }
+                            
+{/* 
+              <div className='search-panel' >
+               <p>Skill List:</p> 
+              {searchlist.map(serch =>{
+              return(
+                 <li  key={serch.id}>
+                  <Skill key={serch.id} skill={serch.skill}/>
+                 </li> 
+                   )
+                  }) }
+              
+              </div> */}
+              </ul>
+              </div>
 
         </div>
         ); 

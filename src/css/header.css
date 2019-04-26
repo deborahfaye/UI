@@ -9,11 +9,13 @@
     font-size: 45px;
     font-style: italic;
     font-weight: bold;
+     position: relative; 
   }
   
 .header2{
     background-color: gold;
     height: 2px;
+    position: relative;
 }
 
 .header img{
@@ -21,5 +23,6 @@
     background-image: url('../components/Picture/logo.png');
     height: 45px;
     width: 45px;
+    position: relative;
     
 }
