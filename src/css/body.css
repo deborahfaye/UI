@@ -5,7 +5,7 @@
     margin-bottom: 0%; 
     background-image: url('../components/Picture/coding-dojo2.png') ;
     background-size: cover;
-     /* position: fixed;  */
+     /* position: inherit;  */
   } 
  .div{
      background-attachment: fixed; 

@@ -15,6 +15,7 @@ constructor(props){
 
     this.state={
         getdevList:[],
+        Id:"",
         firstName:"",
         middleName:"",
         lastName:"",
@@ -67,6 +68,7 @@ handleAddDev = (event) => {
            console.log(addDev);
 
            this.setState({
+            Id:'',
             firstName:'',
             middleName:'',
             lastName:'',
@@ -166,6 +168,7 @@ handleAddDev = (event) => {
                    <div className='dev-list-panel'> 
                       <table className='devlist1'>
                         <tr>
+                        <th>ID</th>
                         <th>FirstName</th>
                         <th>MiddleName</th>
                         <th>LastName</th>
@@ -178,6 +181,7 @@ handleAddDev = (event) => {
                             return (
                                     <Dev 
                                         key={user.id} 
+                                        id={user.id} 
                                         firstName={user.firstName}
                                         middleName={user.middleName}
                                         lastName={user.lastName}

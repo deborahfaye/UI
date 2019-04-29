@@ -8,6 +8,7 @@ class Dev extends Component{
     render(){
         return(
                 <tr>
+                <td>{this.props.id}</td>
                 <td>{this.props.firstName}</td>
                 <td> {this.props.middleName}</td>
                 <td>{this.props.lastName}</td>
@@ -21,6 +22,7 @@ class Dev extends Component{
 
 
 Dev.propTypes = {
+     id:PropTypes.number,
     firstName: PropTypes.string,
     middleName: PropTypes.string,
     lastName: PropTypes.string,
