@@ -1,0 +1,9 @@
+.tr, th {
+    border: 1px solid; 
+   text-align: center;
+   text-emphasis-style: initial;
+   padding: 8px; 
+   background: rgb(59, 89, 152); 
+   color:white;
+ }
+ 

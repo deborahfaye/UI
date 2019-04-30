@@ -12,4 +12,10 @@ export{
   devListURL
  };
 
- 
+
+ //get Assessment
+ const assessListURL = "http://localhost:8080/CaseStudy/rest/assessment";
+
+ export{
+   assessListURL
+ };

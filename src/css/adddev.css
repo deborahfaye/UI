@@ -99,6 +99,7 @@
     font-family: arial, sans-serif;
     /* border-collapse: collapse; */
     width: 50%;
+    position: relative;
 }
 tr{
     border: 1px  #dddddd;  
@@ -108,6 +109,3 @@ tr{
     padding: 8px;
     background-color: white;
   }
-  /* th{
-      border-color: aliceblue;
-  } */

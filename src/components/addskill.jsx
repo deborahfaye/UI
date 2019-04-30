@@ -106,11 +106,24 @@ handleAddSkill2 = (event) => {
 
 render(){
 
-let getskillList = this.state.getskillList;
-let searchlist =this.state.searchlist;
+//  let getskillList = this.state.getskillList;
+// let searchlist =this.state.searchlist;
 console.log("hello world");
 console.log(getskillList);
 
+// const filter = getskillList.reduce((acc, current) => {
+//   const x=acc.find(item => item.id === current.id);
+//   if (!x){
+//     return acc.concat([current]);
+//   }else{
+//     return acc;
+//   }
+// },[]);
+
+ let getskillList = this.state.getskillList;
+
+console.log("hello world");
+console.log(getskillList);
 
 return(
     <div className="addedskill"> 
@@ -138,7 +151,7 @@ return(
               </div>
               
               <div className='skill-list-panel' >
-              <ul className="skill-list">
+              
                           {/* Search:
                                 <input
                                   ref={input => this.search = input}
@@ -152,15 +165,30 @@ return(
                                 >
                                 </input> */}
           
-                              <p>Skill List:</p>
-                            {getskillList.map(skl =>{
-                              return(
-                                  <li key={skl.id}>
-                                  <Skill key={skl.id} skill={skl.skill}/>
-                                  </li>
+                              
+                            <table className='skill-list-table'>
+                            <tr>
+                            <th>ID</th>
+                            <th>Skill</th>
+                            </tr>
+              
+                            <tbody>
+                             
+                             {getskillList.map(skl =>{
+                              return (
+                                 
+                                  <Skill 
+                                  key={skl.id}
+                                  id={skl.id} 
+                                  skill={skl.skill}/>
+                                  
                                   )
-                                  }) }
+                                  }) } 
+                            </tbody>
+                            </table>
+
                             
+
 {/* 
               <div className='search-panel' >
                <p>Skill List:</p> 
@@ -173,7 +201,6 @@ return(
                   }) }
               
               </div> */}
-              </ul>
               </div>
 
         </div>

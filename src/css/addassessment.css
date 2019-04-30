@@ -1,0 +1,19 @@
+
+.assess-list-panel table{
+    margin-top: 1%;
+    margin-right: 50px;
+    margin-left: 40px;
+    border-radius: 4px;
+    border: 1px  black ; 
+    background-color: #011c36;
+    text-align: left;
+    font-family: arial, sans-serif;
+    width: 50%;
+    position: relative;
+}
+tr{
+    border: 1px  #dddddd;  
+    text-align: left;
+    padding: 8px;
+    background-color: white;
+  }

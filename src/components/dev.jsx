@@ -22,7 +22,7 @@ class Dev extends Component{
 
 
 Dev.propTypes = {
-     id:PropTypes.number,
+    devId:PropTypes.number,
     firstName: PropTypes.string,
     middleName: PropTypes.string,
     lastName: PropTypes.string,

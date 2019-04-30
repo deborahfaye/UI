@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-// import '../css/user.css';
+ import '../css/skill.css';
 
 
 class Skill extends Component{
    
     render(){
         return(
-            <div className='skills'>
-                <p className='user-skill'>{this.props.skill}</p>
+            
                 
-            </div>
+              
+                <tr>
+                <td>{this.props.id}</td>
+                <td>{this.props.skill}</td>
+                </tr>
+           
         );
     }
 
@@ -18,6 +22,7 @@ class Skill extends Component{
 
 
 Skill.propTypes = {
+    id:PropTypes.number,
     skill: PropTypes.string
 }
 
