@@ -59,7 +59,7 @@
 
 .skill-list-panel table{
     margin-top: 3%;
-    margin-right: 100px;
+    /* margin-right: 50px; */
     border-radius: 4px;
     border: 1px  black ; 
     background-color: #011c36;
@@ -69,10 +69,9 @@
     width: 50%;
     position: relative;
     }
-.skill-list-panel
 
 .th{
-    border: 1px  #dddddd;  
+    border: #dddddd;  
     padding: 20px;
     width: 90%;
     background-color: white;

@@ -5,7 +5,9 @@ import Skill from './skill';
 import {
     skillList,
   }from '../util/service-helper'; 
-   import axios from 'axios';
+import axios from 'axios';
+
+
 
 class AddSkills extends Component {
    
@@ -49,14 +51,14 @@ handleChange = (event) =>{
 handleAddSkill2 = (event) => {
    event.preventDefault();
 
-      if(this.state.skill===''){
+      if(this.state.skill_name===''){
         console.log('no input');
         alert("Input a Skill !!");
       }
       else{
         const addSkill=
       {
-          skill:this.state.skill
+        skill:this.state.skill
       };
 
       console.log("input");
@@ -111,14 +113,7 @@ render(){
 console.log("hello world");
 console.log(getskillList);
 
-// const filter = getskillList.reduce((acc, current) => {
-//   const x=acc.find(item => item.id === current.id);
-//   if (!x){
-//     return acc.concat([current]);
-//   }else{
-//     return acc;
-//   }
-// },[]);
+
 
  let getskillList = this.state.getskillList;
 
@@ -165,7 +160,7 @@ return(
                                 >
                                 </input> */}
           
-                              
+                         {/* <DataSort */}
                             <table className='skill-list-table'>
                             <tr>
                             <th>ID</th>
@@ -178,7 +173,7 @@ return(
                               return (
                                  
                                   <Skill 
-                                  key={skl.id}
+                               
                                   id={skl.id} 
                                   skill={skl.skill}/>
                                   
@@ -186,8 +181,8 @@ return(
                                   }) } 
                             </tbody>
                             </table>
-
-                            
+                          
+                            {/* </DataSort>        */}
 
 {/* 
               <div className='search-panel' >

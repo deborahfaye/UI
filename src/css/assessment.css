@@ -1,10 +1,22 @@
-.tr, th {
+.tr{
    border: 1px solid; 
    text-align: center;
    text-emphasis-style: initial;
-   padding: 8px;
+   padding: 4px;
    background: rgb(59, 89, 152); 
    color:white;
-   width: 50%;
+    width: 60%; 
  }
+ .tr, button[type=submit] {
+  background-color:  #4CAF50;
+  color: white;
+  font-weight: bold;
+  /* border: none; */
+  border-radius: 5px; 
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
+  /* display:block; */
  
+  }
+  
