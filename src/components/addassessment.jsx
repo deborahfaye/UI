@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Assessment from './assessment';
-import '../css/addassessment.css'
+import '../css/addassessment.css';
 import {
     assessList,
     skillList,
     devList,
   }from '../util/service-helper'; 
 import axios from 'axios';
-// import Skill from './skill.jsx'
+
 
 class AddAssessment extends Component{
 
@@ -56,18 +56,15 @@ getdevLists(){
     })
 }
 
-//post
+//posta
 handleChange1 = (event) => {
-    console.log("input");
+   
     this.setState({
         [event.target.name]:event.target.value
     });
 }
 
 handleAddAssessment = (event) => {
-    console.log("input");
-    // event.preventDefault();
-     
      const Var={
          devId:this.state.devId,
          monthsExp:this.state.monthsExp,
@@ -91,14 +88,8 @@ handleAddAssessment = (event) => {
         skillLevel:'',
         skill_name:''
       });
-     
-    
-// window.location.reload()
 
 }
-
-
-
     render(){
         let getassessList = this.state.getassessList;
         
@@ -119,7 +110,7 @@ handleAddAssessment = (event) => {
 
         return(
             <div className='AddAssessment'>
-                    <div className="input">
+                    <div className="input" id='myForm'>
                     <fieldset>
                         <legend>Add Assessment</legend>     
                     
@@ -145,15 +136,17 @@ handleAddAssessment = (event) => {
                         Skill Level: 
                         <br></br>
                         <select required="required" name="skillLevel" id="skillLevel" onChange={this.handleChange1}>
-                          <option value="0">Trained</option>
-                          <option value="1">Novice</option>
-                          <option value="2">Proficient</option>
-                          <option value="3">Advaced</option>
-                          <option value="4">Expert</option>
-                          <option value="5">Thought Leader</option>
+                          <option value="0">0-Trained</option>
+                          <option value="1">1-Novice</option>
+                          <option value="2">2-Proficient</option>
+                          <option value="3">3-Advaced</option>
+                          <option value="4">4-Expert</option>
+                          <option value="5">5-Thought Leader</option>
                         </select>
                      
                      <button type="submit"  className="samplebutton1" onClick={this.handleAddAssessment}>Add</button> 
+
+                    
                     </fieldset>
 
                     </div>
@@ -178,13 +171,28 @@ handleAddAssessment = (event) => {
                                     skill_name={assess.skill_name}
                                     monthsExp={assess.monthsExp}
                                     skillLevel={assess.skillLevel}
+                                    
                                    />
                                 )
                                   })}
                         </tbody>
                     </table>
-
                     </div>
+                       
+                        {/* <div className="modal-content">
+                        <div className="modal-body">
+                            <p><span className="modal-lable">DevId:</span><input value={this.state.devId} onChange={this.handleChange13} /></p>
+                            <p><span className="modal-lable">Skill:</span><input value={this.state.skill_name} onChange={this.handleChange13} /></p>
+                            <p><span className="modal-lable">Months_Exp:></span><input value={this.state.monthsExp} onChange={this.handleChange13} /></p>
+                            <p><span className="modal-lable">Skill_Level:></span><input value={this.state.skillLevel} onChange={this.handleChange13} /></p>
+                        </div>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" className="btn btn-primary" data-dismiss="modal" onClick={() => { this.handleSave() }}>Save changes</button>
+                        </div>
+                        </div> */}
+
+
             </div>
         );
 

@@ -169,13 +169,13 @@ return(
               
                             <tbody>
                              
-                             {getskillList.map(skl =>{
+                             {getskillList.map(skil =>{
                               return (
                                  
                                   <Skill 
-                               
-                                  id={skl.id} 
-                                  skill={skl.skill}/>
+                                  key={skil.id}
+                                  id={skil.id} 
+                                  skill={skil.skill}/>
                                   
                                   )
                                   }) } 
