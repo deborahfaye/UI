@@ -21,13 +21,16 @@ td, th {
 }
 th{
     padding:10px;
+    /* left:5px; */
+    /* margin-left: 10%; */
+    /* width: 20%; */
 }
 
 .input{
     float: left;
-    margin-left: 5%;
+    margin-left: 3%;
     margin-top: 5%;
-    width:30%;
+    width:25%;
     margin-top:1%; 
     margin-right:20px;
     border-radius: 5px;
@@ -64,7 +67,7 @@ th{
         resize: vertical;
         border-color: deepskyblue;
         border-style: groove;
-        color: red;
+        color: black;
         }
 .input input[type=number] {
         width: 60%;

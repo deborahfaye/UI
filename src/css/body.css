@@ -1,11 +1,12 @@
 .body2{
     width: 100%;
-    height:530px;
+    height:550px;
     /* margin-top: 0px; */
     margin-bottom: 0%; 
     background-image: url('../components/Picture/coding-dojo2.png') ;
     background-size: cover;
-     /* position: inherit;  */
+     position: inherit; 
+     /* overflow: hidden; */
   } 
  .div{
      background-attachment: fixed; 

@@ -5,11 +5,11 @@
    padding: 4px;
    background: rgb(59, 89, 152); 
    color:white;
-    width: 60%; 
+    width: 70%; 
  }
  .tr, button[type=submit] {
   background-color:  #4CAF50;
-  color: white;
+  color: black;
   font-weight: bold;
   /* border: none; */
   border-radius: 5px; 
@@ -32,7 +32,15 @@
 */
   .modal-content{
    text-align: left;
-   
+   position: absolute;
+   background-color: red;
+   /* background-color: rgb(0,0,0); Fallback color */
+   background-color: rgba(237, 240, 245); /* Black w/ opacity */
+   left:25%;
+   width: 40%;
+   padding: 10px;
+   border-radius: 5px; 
+   color: black;
   } 
 
   .modal-content button[type=select]{
@@ -41,7 +49,7 @@
    
   } 
   .modal-content select{
-        width: 70%;
+        width: 80%;
         font-weight: bold;
         padding: 5px;  
         border-radius: 4px; 
@@ -58,17 +66,16 @@
 
   .modal-content button{
    background-color: #4CAF50;
-   color: white;
+   color: black;
    /* font-weight: bold; */
-    /* padding: 2px;    */
+    padding: 4px;    
    /* border: none; */
    border-radius: 5px; 
    text-align: center;
-   margin-left:auto;
    margin-right:auto;
+   margin-left: 30%;
    /* display:block; */
-    /* margin-top:2%;  */
-   /* margin-bottom:5%; */
+   margin-bottom:5%;
 
 } 
 /* .button2{
@@ -81,10 +88,11 @@ margin-left: 1px;;
    padding: 5px;  
    border-radius: 4px; 
    box-sizing: border-box;
-   /* margin-left: 50px; */
+    margin-left: 30px; 
    margin-bottom: 16px;
    resize: vertical;
    border-color: deepskyblue;
    border-style: groove;
+   color: red;
 
 } 

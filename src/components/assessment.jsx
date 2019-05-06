@@ -7,7 +7,7 @@ import {
     devList
   }from '../util/service-helper'; 
   import axios from 'axios';
-  import Modal from './modal';
+//   import Modal from './modal';
 
 
 class Assessment extends Component{
@@ -42,12 +42,12 @@ on =()=> {
     });
 }
 
-// //sets the input field off
-off = () => {
-    this.setState({
-        isVisible:false
-    });
-}
+// // //sets the input field off
+// off = () => {
+//     this.setState({
+//         isVisible:false
+//     });
+// }
 
 //uopdate the data in the form
 handleUpdate12 = (event) => {
@@ -95,8 +95,12 @@ handleSaveUpdate = (event) => {
 
      console.log('addSkill');
      console.log(UpdateData);
-    
-     alert("Assessment Updated");
+
+     this.setState({
+        isVisible:false
+    });
+
+//   alert("Assessment Updated");
 }
 
 
@@ -121,8 +125,8 @@ handleSaveUpdate = (event) => {
                 <td>{this.state.skill_name}</td>
                 <td>{this.state.monthsExp}</td>
                 <td>{this.state.skillLevel}</td>
-                <th><button type="submit" value='' className="update" onClick={this.props.on} >Update</button>
-                    {/* <div>{this.state.isVisible ?
+                <th><button type="submit" value='' className="update" onClick={this.on} >Update</button>
+                    <div className="UpdateFeild">{this.state.isVisible ?
                        <div className="modal-content">
                         <div className="modal-body">
                             <p><span className="modal-lable">DevId:</span><br></br><select name="devId" value={this.state.devId} onChange={this.handleUpdate12}>{getdevList}</select>
@@ -137,9 +141,6 @@ handleSaveUpdate = (event) => {
                                 <option value="5">5-Thought Leader</option></select></p>
                             </div>
                         <div className="modal-footer">
-                            <div className='button1'>
-                            <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={this.off}>Close</button>
-                            </div>
                             <div className='button2'>
                             <button type="button" className="btn btn-primary" data-dismiss="modal" onClick={this.handleSaveUpdate}>Save changes</button>
                             </div>
@@ -147,8 +148,8 @@ handleSaveUpdate = (event) => {
                         </div>
                             :null }
                         </div>
-                 */}
-                 <Modal></Modal>
+                
+                 {/* <Modal></Modal> */}
                 </th> 
                 </tr>
                 

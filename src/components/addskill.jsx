@@ -163,7 +163,7 @@ return(
                          {/* <DataSort */}
                             <table className='skill-list-table'>
                             <tr>
-                            <th>ID</th>
+                            {/* <th>ID</th> */}
                             <th>Skill</th>
                             </tr>
               
@@ -173,8 +173,8 @@ return(
                               return (
                                  
                                   <Skill 
-                                  key={skil.id}
-                                  id={skil.id} 
+                                  // key={skil.id}
+                                  // id={skil.id} 
                                   skill={skil.skill}/>
                                   
                                   )
