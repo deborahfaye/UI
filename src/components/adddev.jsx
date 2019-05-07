@@ -42,7 +42,7 @@ handleChange2 = (event) =>{
     });
 }
 
-handleAddDev = (event) => {
+handleAddDev = () => {
    
     if(this.state.firstName === '' && this.state.lastName === '' &&
        this.state.birthDate === '' && this.state.position === ''){
@@ -62,7 +62,7 @@ handleAddDev = (event) => {
            console.log(addDev);
 
            axios.post('http://localhost:8080/CaseStudy/rest/users', addDev)
-           .then(res => {console.log(res.data); console.log(res);})
+           .then(res => {console.log(res.data); console.log(res);this.getDev();})
           
            console.log('addSkill');
            console.log(addDev);
@@ -75,9 +75,6 @@ handleAddDev = (event) => {
             birthDate:'',
             position:''
           });
-          event.preventDefault();
-          
-    window.location.reload()
         }
 
 
@@ -203,8 +200,6 @@ handleAddDev = (event) => {
 }
 
 AddDev.propTypes = {
-    // handleAddSkill: PropTypes.func,
-    // handleAddSkill2: PropTypes.func,
     getdevList: PropTypes.array,
 
 } 

@@ -165,7 +165,7 @@ handleAddAssessment = (event) => {
                             {getassessList.map(assess =>{
                                 return(
                                     <Assessment
-                                    key={assess.id}
+                                    // key={assess.id}
                                     id={assess.id}
                                     devId={assess.devId}      
                                     skill_name={assess.skill_name}

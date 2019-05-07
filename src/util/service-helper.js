@@ -1,4 +1,4 @@
-import {skillListURL,  devListURL, assessListURL} from './service-url';
+import {skillListURL,  devListURL, assessListURL,joinedTableURL} from './service-url';
 import axios from 'axios';
 
 // get Skill
@@ -28,4 +28,13 @@ const assessList = () => {
 
 export {
     assessList
+}
+
+//get joinedTable
+const joinedTableList = () => {
+  return axios.get(joinedTableURL);
+}
+
+export {
+    joinedTableList
 }

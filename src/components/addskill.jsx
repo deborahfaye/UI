@@ -49,7 +49,6 @@ handleChange = (event) =>{
 
 
 handleAddSkill2 = (event) => {
-   event.preventDefault();
 
       if(this.state.skill_name===''){
         console.log('no input');
@@ -65,7 +64,7 @@ handleAddSkill2 = (event) => {
       console.log(addSkill);
 
       axios.post('http://localhost:8080/CaseStudy/rest/skills', addSkill)
-      .then(res => {console.log(res.data);console.log(res); })
+      .then(res => {console.log(res.data);console.log(res);this.getSkills(); })
       
       console.log('addSkill');
       console.log(this.state.skill);
@@ -75,7 +74,6 @@ handleAddSkill2 = (event) => {
         skill:''
       });
 
-      window.location.reload()
    
   }
   
@@ -124,7 +122,6 @@ return(
     <div className="addedskill"> 
           <p></p>
           <div className="right">  
-                                  {/* <p></p>     */}
                                   <fieldset>
                                   <legend>Add Skill:</legend>
                                   <br></br>

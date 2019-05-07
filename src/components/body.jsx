@@ -10,6 +10,7 @@ import {
   import AddDev from "./adddev";
   import AddAssessment from "./addassessment";
 import Search from './search';
+import SearchFunc from './search';
 //  contains the nav buttons
 class Body extends Component{
     render(){
@@ -39,7 +40,7 @@ class Body extends Component{
  <Route path="/askill" component={AddSkills}/>
  <Route path="/dev" component={AddDev}/>
  <Route path="/askill2" component={AddAssessment}/>
- <Route path="/search" component={Search}/> 
+ <Route path="/upskill" component={SearchFunc}/> 
 
   </div>
 </div>       

@@ -19,3 +19,12 @@ export{
  export{
    assessListURL
  };
+
+
+ 
+ //get JoinedTable
+ const joinedTableURL = "http://localhost:8080/CaseStudy/rest/assessment/joined";
+
+ export{
+  joinedTableURL
+ };
