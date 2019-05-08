@@ -29,7 +29,7 @@ constructor(props){
 
 }
 
-//get the list of assessment
+//get the list of assessment, skill and devList
 componentDidMount(){
     this.getAssessment();
     this.getskillLists();
@@ -56,7 +56,7 @@ getdevLists(){
     })
 }
 
-//posta
+//post
 handleChange1 = (event) => {
    
     this.setState({
@@ -64,7 +64,7 @@ handleChange1 = (event) => {
     });
 }
 
-handleAddAssessment = (event) => {
+handleAddAssessment = () => {
      const Var={
          devId:this.state.devId,
          monthsExp:this.state.monthsExp,
@@ -179,19 +179,6 @@ handleAddAssessment = (event) => {
                     </table>
                     </div>
                        
-                        {/* <div className="modal-content">
-                        <div className="modal-body">
-                            <p><span className="modal-lable">DevId:</span><input value={this.state.devId} onChange={this.handleChange13} /></p>
-                            <p><span className="modal-lable">Skill:</span><input value={this.state.skill_name} onChange={this.handleChange13} /></p>
-                            <p><span className="modal-lable">Months_Exp:></span><input value={this.state.monthsExp} onChange={this.handleChange13} /></p>
-                            <p><span className="modal-lable">Skill_Level:></span><input value={this.state.skillLevel} onChange={this.handleChange13} /></p>
-                        </div>
-                        <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" className="btn btn-primary" data-dismiss="modal" onClick={() => { this.handleSave() }}>Save changes</button>
-                        </div>
-                        </div> */}
-
 
             </div>
         );

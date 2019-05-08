@@ -1,6 +1,5 @@
 .search-list-panel table{
     margin-top: 1%;
-    /* margin-right: 30px; */
     margin-left: 60px;
     border-radius: 4px;
     border: 1px  black ; 
@@ -14,9 +13,6 @@ td, th {
     border: 12px  #dddddd;  
     text-align: center;
     padding: 3px;
-    /* background-color: white; */
-    /* width: 45%; */
-
 }
 th{
     padding:10px;
@@ -28,7 +24,6 @@ th{
     border-radius: 4px; 
     box-sizing: border-box;
     margin-top: 6px;
-    /* margin-left: 70px; */
     margin-bottom: 16px;
     resize: vertical;
     border-color: deepskyblue;
@@ -39,27 +34,20 @@ th{
     background-color: #4CAF50;
     color: white;
     font-weight: bold;
-     padding: 10px 15px;  
-    /* border: none; */
+     padding: 10px 15px; 
     border-radius: 5px; 
-    /* /* text-align: center; */
     margin-left:3px;
-    /* margin-right:auto; */ 
-    /* display:block; */
-     /* margin-top:2%;  */
-     /* margin-bottom:5%; */
     }
-    .searchinput input[type=number] {
-        width: 15%;
-        font-weight: bold;
-        padding: 6px;  
-        border-radius: 4px; 
-        box-sizing: border-box;
-        margin-top: 6px;
-        /* margin-left: 70px; */
-        margin-bottom: 16px;
-        resize: vertical;
-        border-color: deepskyblue;
-        border-style: groove;
+.searchinput input[type=number] {
+    width: 15%;
+    font-weight: bold;
+    padding: 6px;  
+    border-radius: 4px; 
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    border-color: deepskyblue;
+    border-style: groove;
      
-        }
+    }

@@ -15,12 +15,12 @@ constructor(props){
 
     this.state={
         getdevList:[],
-        Id:"",
-        firstName:"",
-        middleName:"",
-        lastName:"",
-        birthDate:"",
-        position:""
+        Id:'',
+        firstName:'',
+        middleName:'',
+        lastName:'',
+        birthDate:'',
+        position:''
     };
 }
 
@@ -62,7 +62,7 @@ handleAddDev = () => {
            console.log(addDev);
 
            axios.post('http://localhost:8080/CaseStudy/rest/users', addDev)
-           .then(res => {console.log(res.data); console.log(res);this.getDev();})
+           .then(res => {console.log(res.data); console.log(res);})
           
            console.log('addSkill');
            console.log(addDev);
@@ -75,6 +75,8 @@ handleAddDev = () => {
             birthDate:'',
             position:''
           });
+
+          this.getDev();
         }
 
 
@@ -97,67 +99,25 @@ handleAddDev = () => {
 
                 FirstName: 
                 <br></br>
-                <input 
-                type="text" 
-                required="required"
-                name="firstName" 
-                id="firstName"  
-                placeholder="Input firstname.." 
-                onChange={this.handleChange2}  
-                >
-                </input>
-
+                <input type="text"  required="required" name="firstName" id="firstName" placeholder="Input firstname.." onChange={this.handleChange2}></input>
                 <br></br>
                 MiddleName:
                 <br></br>
-                <input 
-                type="text" 
-                name="middleName" 
-                id="middleName"  
-                placeholder="Input middlename.." 
-                onChange={this.handleChange2} 
-                >
-                </input>
+                <input type="text" name="middleName" id="middleName" placeholder="Input middlename.." onChange={this.handleChange2}></input>
                 <br></br>
                 LastName: 
                 <br></br>
-                <input 
-                type="text" 
-                required="required"
-                name="lastName" 
-                id="lastName"  
-                placeholder="Input lastname.." 
-                onChange={this.handleChange2} 
-                >
-                </input>
+                <input type="text" required="required" name="lastName" id="lastName" placeholder="Input lastname.." onChange={this.handleChange2}></input>
                 <br></br>
                 BirthDate: 
                 <br></br>
-                <input 
-                type="date"
-                required="required"
-                name="birthDate" 
-                id="birthDate"  
-                placeholder="Input birthdate.." 
-                onChange={this.handleChange2} 
-                >
-                </input>
+                <input type="date" required="required" name="birthDate" id="birthDate" placeholder="Input birthdate.." onChange={this.handleChange2}></input>
                 <br></br>
                 Position: 
                 <br></br>
-               <input 
-                type="text" 
-                required="required"
-                name="position" 
-                id="position"  
-                placeholder="Input position.." 
-                onChange={this.handleChange2} 
-                >
-                </input>
+               <input type="text" required="required" name="position" id="position" placeholder="Input position.." onChange={this.handleChange2}></input>
 
-                
                 <button type="submit"  className="samplebutton" onClick={this.handleAddDev}>Add</button> 
-
                 </fieldset>
                 </div>
  

@@ -1,8 +1,8 @@
 
 .assess-list-panel table{
-    margin-top: 1%;
-    /* margin-right: 30px; */
-    margin-left: 40px;
+    float: right;
+    margin-top: 2%;
+    margin-right: 3%;
     border-radius: 4px;
     border: 1px  black ; 
     background-color: #011c36;
@@ -15,29 +15,22 @@ td, th {
     border: 12px  #dddddd;  
     text-align: center;
     padding: 3px;
-    /* background-color: white; */
-    /* width: 45%; */
-
 }
 th{
     padding:10px;
-    /* left:5px; */
-    /* margin-left: 10%; */
-    /* width: 20%; */
 }
 
 .input{
     float: left;
     margin-left: 3%;
     margin-top: 5%;
-    width:25%;
-    margin-top:1%; 
+    width:30%;
+    margin-top:2%; 
     margin-right:20px;
     border-radius: 5px;
     background-color: rgb(237, 240, 245);
     font-weight: bold;
     text-align: left;
-    /* border-left-width: 9px; */
     border-color: black;
     border-style: groove;
 }
@@ -55,56 +48,64 @@ th{
     border-style: groove;
  
     }
- .input select{
-        width: 60%;
-        font-weight: bold;
-        padding: 5px;  
-        border-radius: 4px; 
-        box-sizing: border-box;
-        margin-top: 6px;
-        margin-left: 70px;
-        margin-bottom: 16px;
-        resize: vertical;
-        border-color: deepskyblue;
-        border-style: groove;
-        color: black;
-        }
+.input select{
+    width: 60%;
+    font-weight: bold;
+    padding: 5px;  
+    border-radius: 4px; 
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-left: 70px;
+    margin-bottom: 16px;
+    resize: vertical;
+    border-color: deepskyblue;
+    border-style: groove;
+    color: black;
+    }
 .input input[type=number] {
-        width: 60%;
-        font-weight: bold;
-        padding: 5px;  
-        border-radius: 4px; 
-        box-sizing: border-box;
-        margin-top: 6px;
-        margin-left: 70px;
-        margin-bottom: 16px;
-        resize: vertical;
-        border-color: deepskyblue;
-        border-style: groove;
-        }
+    width: 60%;
+    font-weight: bold;
+    padding: 5px;  
+    border-radius: 4px; 
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-left: 70px;
+    margin-bottom: 16px;
+    resize: vertical;
+    border-color: deepskyblue;
+    border-style: groove;
+    }
 
 .input  button[type=submit] {
-        background-color: #4CAF50;
-        color: white;
-        font-weight: bold;
-         padding: 12px 20px;  
-        /* border: none; */
-        border-radius: 5px; 
-        text-align: center;
-        margin-left:auto;
-        margin-right:auto;
-        display:block;
-         /* margin-top:2%;  */
-        margin-bottom:5%;
-        }
-        
-.input  button[type=submit]:hover {
-            background-color: #45a049;
-            }
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;  
+    border-radius: 5px; 
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    margin-bottom:5%;
+    }
+
 .input p{
-     text-align: left;
-     margin-left: 20px;
-     margin-top: 5px;
-      /* padding: 5px;  */
-     /* border-style: groove; */
- }           
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 5px;
+    
+ } 
+.fieldset{
+    float: left;
+    margin-left: 5%;
+    margin-top: 10px;
+    text-align: left;
+    width:70%;
+    padding: 1%;
+    margin-right:30px;
+    border-radius: 5px;
+    background-color: rgb(237, 240, 245);
+    font-weight: bold;
+    border-color: black;
+    border-style: groove;
+    }           

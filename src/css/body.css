@@ -1,31 +1,26 @@
 .body2{
     width: 100%;
     height:550px;
-    /* margin-top: 0px; */
     margin-bottom: 0%; 
     background-image: url('../components/Picture/coding-dojo2.png') ;
     background-size: cover;
-     position: inherit; 
-     /* overflow: hidden; */
+    position: inherit; 
   } 
- .div{
-     background-attachment: fixed; 
+.div{
+    background-attachment: fixed; 
 } 
-
 .body1 {
     width: 100%;
     background-color: #011c36;
     height:45px;
     text-align: center;
-     position: inherit; 
+    position: inherit; 
   
 }
-
 .body1 a{
     color: white;
     text-decoration: none;
     position: inherit; 
-   
  }
 
 .body1 input{
@@ -38,12 +33,10 @@
     margin: 0;
     text-align: right;
 }
-  
 .nav li {
     display:inline-block ;
     font-size: 15px;
     font-weight: bold;
     padding: 17px;
-    /* position: fixed; */
 }
 

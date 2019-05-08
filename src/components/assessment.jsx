@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import '../css/assessment.css';
-// import { devList } from '../util/service-helper';
 import {
     skillList,
     devList
   }from '../util/service-helper'; 
   import axios from 'axios';
-//   import Modal from './modal';
+
 
 
 class Assessment extends Component{
@@ -42,14 +41,8 @@ on =()=> {
     });
 }
 
-// // //sets the input field off
-// off = () => {
-//     this.setState({
-//         isVisible:false
-//     });
-// }
 
-//uopdate the data in the form
+//update the data in the form
 handleUpdate12 = (event) => {
     this.setState({
         [event.target.name]:event.target.value
@@ -82,6 +75,7 @@ handleSaveUpdate = (event) => {
         skillLevel:this.state.skillLevel,
         skill_name:this.state.skill_name
     }
+
     console.log("input");
     console.log(Var);
 
@@ -100,7 +94,7 @@ handleSaveUpdate = (event) => {
         isVisible:false
     });
 
-//   alert("Assessment Updated");
+
 }
 
 
@@ -148,8 +142,6 @@ handleSaveUpdate = (event) => {
                         </div>
                             :null }
                         </div>
-                
-                 {/* <Modal></Modal> */}
                 </th> 
                 </tr>
                 

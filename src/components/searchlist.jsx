@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-//  import '../css/skill.css';
+
 
 class SearchList extends Component{
    

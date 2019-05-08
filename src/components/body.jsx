@@ -5,12 +5,12 @@ import {
     NavLink,
     HashRouter
   } from "react-router-dom";
-//   import Home from "./home";
-  import AddSkills from "./addskill";
-  import AddDev from "./adddev";
-  import AddAssessment from "./addassessment";
-import Search from './search';
+import AddSkills from "./addskill";
+import AddDev from "./adddev";
+import AddAssessment from "./addassessment";
 import SearchFunc from './search';
+
+
 //  contains the nav buttons
 class Body extends Component{
     render(){
@@ -23,16 +23,7 @@ class Body extends Component{
      <li><NavLink to="/dev">Developer</NavLink></li>
      <li><NavLink to="/askill2">Skill Assessment</NavLink></li>  
      <li><NavLink to="/upskill">Search</NavLink></li>   
-     {/* <input
-           href="#search"
-           type="text" 
-           name="search" 
-           id="search" 
-           maxLength={15} 
-           placeholder="Search" 
-        >
-     </input> 
-     <button type="submit" name="search" id="search"  >Search</button>  */}
+    
 
 </ul>   
  <div className='content'>
@@ -53,7 +44,6 @@ class Body extends Component{
 // main window
 class Body2 extends Component{
     render(){
-    
         return(
     <div className="body2"  >
  

@@ -8,7 +8,6 @@ class Skill extends Component{
         return(
             
                 <tr>
-                {/* <td>{this.props.id}</td> */}
                 <td>{this.props.skill}</td>
                 </tr>
            
@@ -19,7 +18,6 @@ class Skill extends Component{
 
 
 Skill.propTypes = {
-    // id:PropTypes.number,
     skill: PropTypes.string
 }
 

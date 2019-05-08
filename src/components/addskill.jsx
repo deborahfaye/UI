@@ -64,7 +64,7 @@ handleAddSkill2 = (event) => {
       console.log(addSkill);
 
       axios.post('http://localhost:8080/CaseStudy/rest/skills', addSkill)
-      .then(res => {console.log(res.data);console.log(res);this.getSkills(); })
+      .then(res => {console.log(res.data);console.log(res);})
       
       console.log('addSkill');
       console.log(this.state.skill);
@@ -74,40 +74,15 @@ handleAddSkill2 = (event) => {
         skill:''
       });
 
+      this.getSkills(); 
    
   }
   
 }
 
-// search
-// handleInputChange = () => {
-//   this.setState({query:this.search.value})
-
-//   console.log("inputfor search");
-//   // if(this.search.value !== ''){
-
-//   const url = "http://localhost:8080/CaseStudy/rest/skills?skill=" + this.search.value;
-
-//   axios.get(url)
-//   .then(response => {
-//     this.setState({searchlist:response.data});
-//     console.log(response);
-//     })
-
-//     this.setState({
-//       query:''
-//     });
-  
-  
-
-// }
-
-
-
 render(){
 
-//  let getskillList = this.state.getskillList;
-// let searchlist =this.state.searchlist;
+
 console.log("hello world");
 console.log(getskillList);
 
@@ -127,16 +102,8 @@ return(
                                   <br></br>
                                   Skill: 
                                   <br></br>
-                                  <input 
-                                  type="text" 
-                                  name="skill" 
-                                  id="skill" 
-                                  required="required" 
-                                  placeholder="Input a skill.." 
-                                  onChange={this.handleChange} 
-                                  >
-                                  </input>
-                                  
+                                  <input type="text" name="skill" id="skill" required="required" placeholder="Input a skill.." onChange={this.handleChange}></input>
+                          
                                   <button type="submit"  className="samplebutt" onClick={this.handleAddSkill2}>Add</button> 
                                   </fieldset>       
             
@@ -144,55 +111,22 @@ return(
               
               <div className='skill-list-panel' >
               
-                          {/* Search:
-                                <input
-                                  ref={input => this.search = input}
-                                  type="text" 
-                                  name="search" 
-                                  id="search" 
-                                  maxLength={15} 
-                                  placeholder="Search"
-                    
-                                  onChange={this.handleInputChange}  
-                                >
-                                </input> */}
-          
-                         {/* <DataSort */}
                             <table className='skill-list-table'>
                             <tr>
-                            {/* <th>ID</th> */}
                             <th>Skill</th>
                             </tr>
-              
-                            <tbody>
-                             
+            
+                            <tbody>  
                              {getskillList.map(skil =>{
                               return (
                                  
                                   <Skill 
-                                  // key={skil.id}
-                                  // id={skil.id} 
                                   skill={skil.skill}/>
                                   
                                   )
                                   }) } 
                             </tbody>
                             </table>
-                          
-                            {/* </DataSort>        */}
-
-{/* 
-              <div className='search-panel' >
-               <p>Skill List:</p> 
-              {searchlist.map(serch =>{
-              return(
-                 <li  key={serch.id}>
-                  <Skill key={serch.id} skill={serch.skill}/>
-                 </li> 
-                   )
-                  }) }
-              
-              </div> */}
               </div>
 
         </div>
